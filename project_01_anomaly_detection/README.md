@@ -1,28 +1,46 @@
-# Project 01 — KPI Anomaly Detection for Safety Metrics
+## Project: WHS Anomaly Detection (Isolation Forest)
+# Objective
 
-This project simulates a **Workplace Health & Safety (WHS)** analytics environment.  
-We generate synthetic site-level KPIs and apply anomaly detection to surface 
-high-risk patterns.
+Detect operational anomalies across multiple fulfillment sites using Isolation Forest.
+Dataset simulates real-world WHS patterns (hours, incidents, overtime, staffing, idle time, etc.).
 
----
-
-## Goals
-- Create synthetic WHS-style data  
-- Compute KPIs (RIR, LTIR, SIR, etc.)  
-- Detect anomalies using **Isolation Forest**  
-- Produce clear visualizations for stakeholders  
-
----
-
-## Structure
+## Project Structure
 project_01_anomaly_detection/
+│
 ├── data/
+│   ├── anomaly_output.csv           # Final model output
+│
 ├── notebooks/
+│   ├── anomaly_detection_starter.ipynb
+│
 ├── src/
-├── models/
-└── visuals/
+│   ├── (future Python modules)
+│
+├── visuals/
+│   ├── incident_anomalies.png       # Visualization
+│
+└── README.md
 
-## Setup
+## Techniques Used
 
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
+Synthetic WHS dataset generation
+
+Anomaly injection (spikes, outliers, corrupted data)
+
+Feature scaling (StandardScaler)
+
+Isolation Forest modeling
+
+Anomaly score computation
+
+Visualization with Matplotlib
+
+## Results
+
+~10% anomalies detected
+
+Captured injury spikes, staffing dips, extreme idle times
+
+Clean visualization saved in visuals/
+
+Final dataset exported in data/
